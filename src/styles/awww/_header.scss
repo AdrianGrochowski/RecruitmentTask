@@ -1,0 +1,204 @@
+.header {
+  font-weight: 700;
+    &__logo {
+        display: inline-block;
+        outline-color: $white;
+        padding: 1rem 0;
+        margin: 0;
+
+        img {
+            height: 2rem;
+            filter: invert(100%);
+        }
+    }
+}
+
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+
+@include media-breakpoint-up(xs) {
+    .navbar-toggler > .times {
+        display: inline;
+        font-size: 30px;
+    }
+
+    .navbar-toggler.collapsed > .times,
+    .navbar-toggler:not(.collapsed) > .navbar-toggler-icon {
+        display: none;
+    }
+
+    .navbar-toggler {
+        outline: none !important;
+        height: 40px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .nav-link,
+    .navbar-brand {
+        color: $white !important;
+    }
+
+    .nav-item {
+        text-align: right;
+        line-height: 1.7;
+        margin-right: 2rem;
+        @media(max-width: 575px) {
+          margin-right: 0;
+        }
+        &--round {
+          border: 2px solid #5c7cc7;
+          border-radius: 2rem;
+          padding: 0rem 1rem;
+          text-align: center;
+          @media(max-width: 768px) {
+            margin-left: 6rem;
+          }
+          @media(max-width: 320px) {
+            border: 0;
+            margin-left: 5rem;
+          }
+        }
+    }
+
+    .nav-link:hover {
+        color: lightgray !important;
+    }
+
+    .button:focus {
+        outline: none !important;
+    }
+
+    body {
+        min-height: 200vh;
+    }
+
+    .navbar-default {
+        transition: 100ms ease;
+        background: transparent;
+
+        #nav-icon1 span,
+        #nav-icon3 span,
+        #nav-icon4 span {
+            background: $white;
+        }
+    }
+
+    .navbar-default.scrolled {}
+
+    #nav-icon1 {
+        width: 45px;
+        margin-top: -16px;
+        position: relative;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.5s ease-in-out;
+        -moz-transition: 0.5s ease-in-out;
+        -o-transition: 0.5s ease-in-out;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        outline: none;
+    }
+
+    #nav-icon1 span,
+    #nav-icon3 span,
+    #nav-icon4 span {
+        display: block;
+        position: absolute;
+        height: 6px;
+        width: 100%;
+        background: $white;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        -webkit-transition: 0.25s ease-in-out;
+        -moz-transition: 0.25s ease-in-out;
+        -o-transition: 0.25s ease-in-out;
+        transition: 0.25s ease-in-out;
+        outline: none;
+    }
+
+    #nav-icon1 span:nth-child(1) {
+        top: 0;
+    }
+
+    #nav-icon1 span:nth-child(2) {
+        top: 13px;
+    }
+
+    #nav-icon1 span:nth-child(3) {
+        top: 26px;
+    }
+
+    #nav-icon1.open span:nth-child(1) {
+        top: 13px;
+        -webkit-transform: rotate(135deg);
+        -moz-transform: rotate(135deg);
+        -o-transform: rotate(135deg);
+        transform: rotate(135deg);
+    }
+
+    #nav-icon1.open span:nth-child(2) {
+        opacity: 0;
+        left: -60px;
+    }
+
+    #nav-icon1.open span:nth-child(3) {
+        top: 13px;
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -o-transform: rotate(-135deg);
+        transform: rotate(-135deg);
+    }
+}
+@include media-breakpoint-up(md) {}
+@include media-breakpoint-down(md) {
+    .navbar-collapse {
+        position: absolute;
+        top: 58px;
+        right: 0;
+        margin-right: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 30%;
+        height: 100vh;
+    }
+
+    .navbar-nav {
+        height: 100vh;
+    }
+
+    .navbar-collapse.collapsing {
+        height: auto;
+        -webkit-transition: right 0.3s ease;
+        -o-transition: right 0.3s ease;
+        -moz-transition: right 0.3s ease;
+        transition: right 0.3s ease;
+        right: -100%;
+    }
+
+    .navbar-collapse.show {
+        // right: 0;
+        -webkit-transition: right 0.3s ease-in;
+        -o-transition: right 0.3s ease-in;
+        -moz-transition: right 0.3s ease-in;
+        transition: right 0.3s ease-in;
+    }
+}
+@include media-breakpoint-down(sm) {
+    .navbar-collapse {
+        width: 60%;
+    }
+}

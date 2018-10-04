@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="images/awww-logo.svg">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <title>AWWW</title>
+</head>
+
+<body>
+
+    ${require('./templates/awww/header.html')}
+
+    ${require('./templates/awww/hero.html')}
+    ${require('./templates/awww/what-we-do.html')}
+    ${require('./templates/awww/section.html')}
+    ${require('./templates/awww/technology.html')}
+    ${require('./templates/awww/technology_left.html')}
+
+    ${require('./templates/awww/footer.html')}
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({
+offset: 100,
+delay: 200,
+duration: 1000,
+easing: 'ease',
+once: true
+});
+</script>
+</body>
+</html>

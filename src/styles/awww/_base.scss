@@ -1,0 +1,27 @@
+html,body {
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+  height:44px;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.container-fluid {
+  margin-left: 8rem;
+  margin-right: 8rem;
+
+  @media(max-width: 991px) {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.section {
+  display: flex;
+}
